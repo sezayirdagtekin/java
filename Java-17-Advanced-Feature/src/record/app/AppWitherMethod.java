@@ -1,15 +1,17 @@
+package record.app;
+
 import record.records.Customer;
 import record.records.Order;
 import record.records.OrderLine;
 import record.records.Product;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
-public class App {
+public class AppWitherMethod {
 
     public static void main(String[] args) {
 
@@ -24,10 +26,19 @@ public class App {
         orderLines.add(orderLine1);
         orderLines.add(orderLine2);
         var order = new Order(1,customer, LocalDateTime.now(),orderLines);
-
         System.out.println(order);
-       //.UnsupportedOperationException . Because Orderlines is unmodifiable
-      //  order.orderLine().add(orderLine1);
+
+          //Update price and quantity  with Wither method
+        List<OrderLine> updatedOrderLines = order.orderLine()
+                                           .stream()
+                                           .map(line->line.withQuantity(line.quantity()*2)
+                                           .withPrice(line.price().multiply(new BigDecimal(3))))
+                                           .collect(Collectors.toList());
+
+      var updatedOrder= new Order(order.id(),order.customer(),order.dateTime(),updatedOrderLines);
+
+        System.out.println(updatedOrder);
+
     }
 
 }

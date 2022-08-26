@@ -1,3 +1,5 @@
+package record.app;
+
 import record.records.Customer;
 import record.records.OderRecordBuilder;
 import record.records.OrderLine;
