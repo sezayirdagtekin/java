@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @FunctionalInterface
 public interface PriceCalculator {
     // Added in version 1
-    BigDecimal calculatePrice(Order order);
+   abstract BigDecimal calculatePrice(Order order);
 
     // Added in version 2
     default BigDecimal discount(Order order, BigDecimal discount) {

@@ -13,5 +13,5 @@ public class PriceCalculatorImpl  implements  PriceCalculator{
     }
     //You do not have to implement default method : default BigDecimal discount(Order order, BigDecimal discount) {}
     //You do not hav toe  implement static method :  static BigDecimal lowesPrice(Order order){}
-    
+
 }
