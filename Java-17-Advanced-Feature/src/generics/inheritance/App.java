@@ -29,10 +29,3 @@ public class App {
     }
 
 }
-
-
-interface  Animal{ }
-
-record  Dog(String name) implements  Animal{ }
-
-record  Cat(String name) implements Animal{}
