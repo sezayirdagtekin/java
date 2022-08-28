@@ -15,11 +15,17 @@ public class App {
         dogs.add(new Dog("Daisy"));
         dogs.add(new Dog("Daisy"));
 
-        //Error
-       // List<Animal>  animals= dogs;  suppose that  allowed
 
-        //Then we could add Cat to list of Dogs!
+       // List<Animal>  animals= dogs;  //Error!
+
+        // Suppose that  allowed. Then we could add Cat to list of Dogs!
         //animals.add(new Cat("Shiba"));
+
+        //Using wildcard
+        List<? extends  Animal> animals= dogs; //OK
+        //animals.add(new Cat("Shiba")); //Still error
+        // animals.add(new Dog("Max"));   //Still error
+
     }
 
 }
