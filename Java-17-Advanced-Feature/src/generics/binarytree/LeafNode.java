@@ -1,6 +1,6 @@
 package generics.binarytree;
 
-public class LeafNode<T>  implements  TreeNode<T>{
+public class LeafNode<T extends  Comparable<T>>  implements  TreeNode<T>{
 
   private final T value;
 

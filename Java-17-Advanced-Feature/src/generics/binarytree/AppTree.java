@@ -11,6 +11,7 @@ class App {
         TreeNode<Integer> tree=  new InnerNode<>(new LeafNode<>(2),new InnerNode<>(left,right));
 
         System.out.println(tree);
+        System.out.println("Max value:"+tree.getValue());
 
     }
 }
