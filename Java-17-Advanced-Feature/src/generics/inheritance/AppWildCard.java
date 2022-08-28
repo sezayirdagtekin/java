@@ -9,7 +9,7 @@ public class AppWildCard {
 
         List<Dog> dogs = new ArrayList<>();
         dogs.add(new Dog("Daisy"));
-        dogs.add(new Dog("Daisy"));
+        dogs.add(new Dog("Leo"));
 
         List<Cat> cats = new ArrayList<>();
         cats.add(new Cat("Shiba"));
