@@ -1,9 +1,9 @@
 package record.records;
 
+import record.validation.Validation;
+
 import java.time.LocalDateTime;
 import java.util.List;
-
-import record.validation.Validation;
 
 public record Order(long id,Customer customer, LocalDateTime dateTime, List<OrderLine> orderLine) {
 
